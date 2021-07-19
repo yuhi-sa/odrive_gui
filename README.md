@@ -8,11 +8,3 @@ odrive_rosを起動した後．
 roslaunch rosbridge_server rosbridge_websocket.launch
 command.htmlを開く
 ```
-
-# 画面
-- メイン  
-![](https://github.com/yuhi-sa/odrive_gui/blob/master/img/fig1.png?raw=true)  
-- 位置制御  
-![](https://github.com/yuhi-sa/odrive_gui/blob/master/img/fig2.png?raw=true)  
-- 速度制御  
-![](https://github.com/yuhi-sa/odrive_gui/blob/master/img/fig3.png?raw=true)
