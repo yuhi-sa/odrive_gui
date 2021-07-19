@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Odrive_control：位置制御</title>
+    <!-- ROS -->
+    <script src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <!-- BootstrapのCSS読み込み -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="controller.js"></script>
+
+</head>
+
+<body>
+
+<script>
+    window.onload =　function First_pos(){
+    target = document.getElementById("position_output");
+    target.innerHTML = pd;
+    }
+</script>
+
+<div class="p-3 mb-2 bg-primary text-white">
+    <h2>Odrive GUI：位置制御</h2>
+</div>
+<!--スペース--><div><p><br></p></div>
+<div class="col text-center">
+    <h5>現在の位置</h5>
+    <div class="border border-dark" style="padding:20px;">
+        <div id="position_output"></div>
+    </div>
+</div>
+<!--スペース--><div><p><br></p></div>
+<div class="container-fluid">
+    <div class="col text-center">
+        <h5>直接位置を入力</h5>
+
+        <form id="form1" action="#" class="center-block">
+            <input type="text" id="input_message" value="">
+            <input type="button" onclick="Position0()" value="送信">
+        </form>
+    </div>
+    <!--スペース--><div><p><br></p></div>
+    <div class="col text-center">
+        <h5>右回転</h5>
+        <div class="btn-group btn-block" role="group" aria-label="基本のボタングループ">
+            <button onclick="Position1()" type="button" class="btn btn-primary">0</button>
+            <button onclick="Position2()" type="button" class="btn btn-secondary">1000</button>
+            <button onclick="Position3()" type="button" class="btn btn-success">2000</button>
+            <button onclick="Position4()" type="button" class="btn btn-danger">3000</button>
+            <button onclick="Position5()" type="button" class="btn btn-warning">4000</button>
+            <button onclick="Position6()" type="button" class="btn btn-info">5000</button>
+            <button onclick="Position7()" type="button" class="btn btn-dark">6000</button>
+        </div>
+    </div>
+    <!--スペース--><div><p><br></p></div>
+    <div class="col text-center">
+        <h5>左回転</h5>
+        <div class="btn-group btn-block" role="group" aria-label="基本のボタングループ">
+            <button onclick="Position8()" type="button" class="btn btn-primary">0</button>
+            <button onclick="Position9()" type="button" class="btn btn-secondary">-1000</button>
+            <button onclick="Position10()" type="button" class="btn btn-success">-2000</button>
+            <button onclick="Position11()" type="button" class="btn btn-danger">-3000</button>
+            <button onclick="Position12()" type="button" class="btn btn-warning">-4000</button>
+            <button onclick="Position13()" type="button" class="btn btn-info">-5000</button>
+            <button onclick="Position14()" type="button" class="btn btn-dark">-6000</button>
+        </div>
+    </div>
+    <!--スペース--><div><p><br></p></div>
+    <div class="col text-center">
+        <div>
+            <button onclick="main()" type="button" class="btn-outline-dark">メインメニュー</button>
+            <button onclick="velchange()" type="button" class="btn-outline-danger">速度制御</button>
+        </div>
+    </div>
+
+</div>
+
+</body>

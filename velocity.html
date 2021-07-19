@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Odrive_control：位置制御</title>
+    <!-- ROS -->
+    <script src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <!-- BootstrapのCSS読み込み -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="controller.js"></script>
+
+</head>
+
+<body>
+
+<script>
+    window.onload =　function First_vel(){
+    target = document.getElementById("speed_output");
+    target.innerHTML = pd;
+    }
+</script>
+
+<div class="p-3 mb-2 bg-primary text-white">
+    <h2>Odrive GUI：速度制御</h2>
+</div>
+
+<div class="container-fluid">
+
+    <!--スペース--><div><p><br></p></div>
+
+    <div class="col text-center">
+        <h5>現在の速度</h5>
+        <div class="border border-dark" style="padding:20px;">
+            <div id="speed_output"></div>
+        </div>
+    </div>
+    
+    <!--スペース--><div><p><br></p></div>
+
+    <div class="col text-center">
+        <h5>速度調整</h5>
+        <div class="btn-group btn-block" role="group" aria-label="基本のボタングループ">
+            <button onclick="SpeedUp()" type="button" class="btn btn-primary">UP</button>
+            <button onclick="SpeedDown()" type="button" class="btn btn-secondary">Down</button>
+    
+        </div>
+
+    </div>
+
+    <!--スペース--><div><p><br></p></div>
+
+    <div class="col text-center">
+        <div>
+            <button onclick="main()" type="button" class="btn-outline-dark">メインメニュー</button>
+            <button onclick="poschange()" type="button" class="btn-outline-primary">位置制御</button>
+        </div>
+    </div>
+
+</div>
+
+</body>

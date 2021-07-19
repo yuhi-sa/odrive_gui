@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Odrive_control</title>
+    <!-- ROS -->
+    <script src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <!-- BootstrapのCSS読み込み -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="controller.js"></script>
+
+</head>
+
+<body>
+<div class="p-3 mb-2 bg-primary text-white">
+    <h2>Odrive GUI</h2>
+</div>
+<!--スペース--><div><p><br></p></div>
+
+<div class="container-fluid">
+    <div class="col text-center">
+        <h5>起動方法</h5>
+        <p class="p-3 mb-2 bg-secondary text-white">
+            #新しいターミナルを開く<br>
+            $ roslaunch rosbridge_server rosbridge_websocket.launch
+        </p>    
+    </div>
+
+    <!--スペース--><div><p><br></p></div>
+    <div class="col text-center">
+        <h5>速度制御or位置制御でスタート</h5>
+        <div>
+            <button onclick="poschange()" type="button" class="btn-outline-primary">位置制御</button>
+            <button onclick="velchange()" type="button" class="btn-outline-danger">速度制御</button>
+        </div>
+    </div>
+</div>
+<!--スペース--><div><p><br></p></div>
+
+<div class="col text-center">
+    <h5>参考</h5>
+    <a href ="https://odriverobotics.com"><img src="img/odrive_logo.png" width="15%" hspace="10" vspace="10"></a>
+    <a href ="http://wiki.ros.org/rosbridge_suite/Tutorials/RunningRosbridge"><img src="img/ROS_logo.png" width="15%" hspace="10" vspace="10"></a>
+    <a href ="https://github.com/yuhi-sa/odrive_gui"><img src="img/github_logo.png" width="15%" hspace="10" vspace="10"></a>
+</div>
+
+
+</body>
